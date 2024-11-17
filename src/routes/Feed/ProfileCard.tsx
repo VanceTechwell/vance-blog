@@ -17,7 +17,7 @@ const ProfileCard: React.FC<Props> = () => {
           <Image src={CONFIG.profile.image} fill alt="" />
         </div>
         <div className="mid">
-          <div className=" name">{CONFIG.profile.name}</div>
+          <div className="name">{CONFIG.profile.name}</div>
           <div className="role">{CONFIG.profile.role}</div>
           <div className="text-sm mb-2">{CONFIG.profile.bio}</div>
         </div>
@@ -39,6 +39,7 @@ const StyledWrapper = styled.div`
     width: 100%;
     background-color: ${({ theme }) =>
       theme.scheme === "light" ? "white" : theme.colors.gray4};
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     @media (min-width: 768px) {
       padding: 1rem;
     }
@@ -48,10 +49,16 @@ const StyledWrapper = styled.div`
     .top {
       position: relative;
       width: 100%;
+      border-radius: 1rem; /* Ensures rounded corners for the container */
+      overflow: hidden; /* Ensures the image fits within rounded corners */
       &:after {
         content: "";
         display: block;
-        padding-bottom: 100%;
+        padding-bottom: 100%; /* Maintains a square aspect ratio */
+      }
+      img {
+        border-radius: 1rem; /* Ensures the image respects the border radius */
+        object-fit: cover; /* Makes sure the image covers the area without stretching */
       }
     }
     .mid {
@@ -70,6 +77,7 @@ const StyledWrapper = styled.div`
         font-size: 0.875rem;
         line-height: 1.25rem;
         color: ${({ theme }) => theme.colors.gray11};
+        text-align: center;
       }
       .bio {
         margin-bottom: 0.5rem;
@@ -78,4 +86,4 @@ const StyledWrapper = styled.div`
       }
     }
   }
-`
+`;
