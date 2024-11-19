@@ -3,8 +3,10 @@ import Link from "next/link"
 
 const NavBar: React.FC = () => {
   const links = [
-    { id: 1, name: "About", to: "/about" },
-    { id: 2, name: "Resume", to: "/resume" }
+    { id: 1, name: "Home", to: "/" },
+    { id: 2, name: "Resume", to: "/resume" },
+    { id: 3, name: "About", to: "/about" },
+
   ]
   return (
     <StyledWrapper className="">
