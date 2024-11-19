@@ -5,11 +5,13 @@ const CONFIG = {
     image: "/me.jpg", // If you want to create your own notion avatar, check out https://notion-avatar.vercel.app
     role: "Sr QA Automation Engineer 🔍 DevOps Engineer 👨‍💻 Frontend Developer 💻",
     bio: "I like tech stuff",
-    email: "VanceTechwell@gmail.com",
-    linkedin: "VanceTechwell",
-    github: "VanceTechwell",
-    instagram: "VanceTechwell",
-    youtube: "@MattTechwell",
+    x: 'matttechwell',
+    linkedin: "matttechwell",
+    github: "matttechwell",
+    instagram: "matttechwell",
+    youtube: "@matttechwell",
+    strava: "matttechwell",
+    email: "matt.techwell@gmail.com",
   },
   projects: [
     {
@@ -19,13 +21,13 @@ const CONFIG = {
   ],
   // blog setting (required)
   blog: {
-    title: "Vance Blog",
+    title: "Matt Techwell",
     description: "welcome to my blog",
     scheme: "dark", // 'light' | 'dark' | 'system'
   },
 
   // CONFIG configration (required)
-  link: "https://morethan-log.vercel.app",
+  link: "https://matt-techwell.vercel.app/",
   since: 2022, // If leave this empty, current year will be used.
   lang: "en-US", // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES', 'ko-KR']
   ogImageGenerateURL: "https://og-image-korean.vercel.app", // The link to generate OG image, don't end with a slash
